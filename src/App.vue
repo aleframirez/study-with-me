@@ -12,12 +12,19 @@
           alt="grip"
         />
         <img
+          @click="showTimer"
           class="img-space"
           src="./assets/icons/aside/timer.svg"
           alt="timer"
         />
-        <img class="img-space" src="./assets/icons/aside/todo.svg" alt="todo" />
         <img
+          @click="showTodo"
+          class="img-space"
+          src="./assets/icons/aside/todo.svg"
+          alt="todo"
+        />
+        <img
+          @click="showNotes"
           class="img-space"
           src="./assets/icons/aside/notes.svg"
           alt="notes"
@@ -30,7 +37,7 @@
       </aside>
     </section>
     <section>
-      <TimerClock />
+      <TimerClock v-show="timerOn" />
     </section>
   </section>
 </template>
@@ -39,12 +46,31 @@
 import { ref, onUnmounted } from "vue";
 import TimerClock from "./components/timer/TimerClock.vue";
 
-// Variables reactivas
+// Variables reactivas Drag-Drop
 const posX = ref(10); // Posición inicial en X
 const posY = ref(150); // Posición inicial en Y
 const offsetX = ref(0); // Para calcular la distancia
 const offsetY = ref(0); // Para calcular la distancia
 const isMouseDown = ref(false); // Indicador de si el mouse esta presionado
+// Mostrar las distintas ventanas
+const timerOn = ref(false);
+const todoOn = ref(false);
+const notesOn = ref(false);
+
+// Funcion para mostrar el Timer
+function showTimer() {
+  timerOn.value = !timerOn.value;
+}
+
+// Funcion para mostrar el todoList
+function showTodo() {
+  todoOn.value = !todoOn.value;
+}
+
+// Funcion para mostrar las notas
+function showNotes() {
+  notesOn.value = !notesOn.value;
+}
 
 // Funcion para iniciar el arrastre
 const startDragging = (event) => {
@@ -107,5 +133,9 @@ onUnmounted(() => {
 
 .header {
   cursor: grab;
+}
+
+.img-space {
+  cursor: pointer;
 }
 </style>
