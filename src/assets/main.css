@@ -1,0 +1,30 @@
+:root {
+  /* Dark Mode */
+  --lateral-dark-mode: #ffc857;
+  --clock-dark-mode: #16202e;
+  --notes-dark-mode: #114e50;
+  --text-dark-mode: #f0f8ff;
+  --personal-button: #c1440e;
+  --important-dark-mode: #ff6f61;
+  /* Light Mode */
+  --lateral-light-mode: #f4a261;
+  --clock-light-mode: #f0e5c8;
+  --notes-light-mode: #d4b483;
+  --text-light-mode: #393939;
+  --business-button: #ffb347;
+  --important-light-mode: #ff4500;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("forest-night-4.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
