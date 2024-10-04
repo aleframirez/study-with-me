@@ -129,6 +129,7 @@ onUnmounted(() => {
   border: 2px solid var(--clock-dark-mode);
   gap: 1rem;
   z-index: 100;
+  user-select: none;
 }
 
 .header {
