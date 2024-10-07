@@ -1,7 +1,7 @@
 {
   "name": "study-with-me",
   "author": "Ramirez Alejandro <aleframirez5@gmail.com>",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple Pomodoro timer app with customizable study and break durations. A todo list, and Sticky Notes",
   "private": true,
   "type": "module",

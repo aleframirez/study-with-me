@@ -1,5 +1,6 @@
 <template>
   <section>
+    <h1 style="display: none">Study With Me</h1>
     <section>
       <aside
         class="draggable-window"
@@ -38,6 +39,7 @@
     </section>
     <section>
       <TimerClock v-show="timerOn" />
+      <TodoComponent v-show="todoOn" />
     </section>
   </section>
 </template>
@@ -45,6 +47,7 @@
 <script setup>
 import { ref, onUnmounted } from "vue";
 import TimerClock from "./components/timer/TimerClock.vue";
+import TodoComponent from "./components/todo/TodoComponent.vue";
 
 // Variables reactivas Drag-Drop
 const posX = ref(10); // Posición inicial en X

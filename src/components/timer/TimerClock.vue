@@ -54,7 +54,7 @@ import { ref, onUnmounted } from "vue";
 import TimerConfig from "./TimerConfig.vue";
 
 // Variables reactivas para Drag-Drop
-const posX = ref(100); // Posición inicial en X para el grid-dots
+const posX = ref(650); // Posición inicial en X para el grid-dots
 const posY = ref(50); // Posición inicial en Y para el grid-dots
 const offsetX = ref(0); // Para calcular la distancia
 const offsetY = ref(0); // Para calcular la distancia
@@ -136,6 +136,7 @@ function pause() {
   interval.value = undefined;
 }
 
+// Funcion para resetear temporizador y descansos
 function reset() {
   pause(); // Pausamos el reloj para que no empiece de una
   startPause.value = true;
