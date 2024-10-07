@@ -138,6 +138,7 @@ function pause() {
 
 function reset() {
   pause(); // Pausamos el reloj para que no empiece de una
+  startPause.value = true;
   timeElapsed.value = studyTime.value; // Volvemos al valor inicial
   currentCycle.value = 0; // Reiniciamos los ciclos
   isStudyTime.value = true; // Volver al tiempo de estudio
