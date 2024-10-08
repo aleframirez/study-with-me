@@ -24,7 +24,7 @@ import CreateTodo from "./CreateTodo.vue";
 import TodoList from "./TodoList.vue";
 
 // Variables reactivas para Drag-Drop
-const posX = ref(100); // Posición inicial en X para el grid-dots
+const posX = ref(150); // Posición inicial en X para el grid-dots
 const posY = ref(50); // Posición inicial en Y para el grid-dots
 const offsetX = ref(0); // Para calcular la distancia
 const offsetY = ref(0); // Para calcular la distancia

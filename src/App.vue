@@ -40,6 +40,7 @@
     <section>
       <TimerClock v-show="timerOn" />
       <TodoComponent v-show="todoOn" />
+      <StickyNotes v-show="notesOn" />
     </section>
   </section>
 </template>
@@ -48,6 +49,7 @@
 import { ref, onUnmounted } from "vue";
 import TimerClock from "./components/timer/TimerClock.vue";
 import TodoComponent from "./components/todo/TodoComponent.vue";
+import StickyNotes from "./components/sticky-notes/StickyNotes.vue";
 
 // Variables reactivas Drag-Drop
 const posX = ref(10); // Posición inicial en X
@@ -56,9 +58,9 @@ const offsetX = ref(0); // Para calcular la distancia
 const offsetY = ref(0); // Para calcular la distancia
 const isMouseDown = ref(false); // Indicador de si el mouse esta presionado
 // Mostrar las distintas ventanas
-const timerOn = ref(false);
-const todoOn = ref(false);
-const notesOn = ref(false);
+const timerOn = ref(true);
+const todoOn = ref(true);
+const notesOn = ref(true);
 
 // Funcion para mostrar el Timer
 function showTimer() {
